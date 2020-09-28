@@ -23,3 +23,14 @@
 hs_err_pid*
 /.gradle/
 /build/
+.classpath
+.project
+.vscode
+nbactions.xml
+.settings
+target
+test-output
+*.iml
+.idea
+*.class
+*~
