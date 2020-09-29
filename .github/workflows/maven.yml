@@ -40,15 +40,5 @@ jobs:
         uses: scacap/action-surefire-report@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Generate lcov report from jacoco
-        uses: danielpalme/ReportGenerator-GitHub-Action@4.6.7
-        with:
-          reports: 'target/site/jacoco/jacoco.xml'
-          targetdir: 'target/site/coverage'
-          reporttypes: 'lcov' 
-      - name: Format lcov and attach to PR  
-        uses: romeovs/lcov-reporter-action@v0.2.16
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          lcov-file: ./target/site/coverage/lcov.info  
+
   
