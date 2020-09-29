@@ -44,10 +44,13 @@ public class AppTestIT {
 
     @Test
     public void testAddition() {
+    	// Given: Joe has the calculator window open
     	PageCalculator pageCalc = new PageCalculator(driver);
+    	// When: Joe types 23 into the first number and 19 in the second number and then clicks on add
     	pageCalc.setFirstNumber("23");
     	pageCalc.setSecondNumber("19");
     	pageCalc.add();
+    	// Then: the result field shows the sum of the numbers: 42
     	assertEquals(pageCalc.getResult(), "42");
     	
     }

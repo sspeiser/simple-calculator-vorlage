@@ -21,7 +21,6 @@
 	</properties>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>com.jaliansystems</groupId>
 			<artifactId>marathon-java-driver</artifactId>
