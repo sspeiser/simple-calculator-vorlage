@@ -18,17 +18,15 @@ import net.sourceforge.marathon.javadriver.JavaDriver;
 public class AppTestIT {
 	
 	private CalculatorWindow calcWin;
+	private Calculator calculator;
 	private JavaDriver driver;
 
 	@Before
 	public void setUp() {
-		Calculator calculator = new Calculator();
-		calcWin = new CalculatorWindow(calculator);
-		SwingUtilities.invokeLater(new Runnable() {
-			@Override
-			public void run() {
-				calcWin.setVisible(true);
-			}
+		calculator = new Calculator();
+		SwingUtilities.invokeLater(() -> {
+			calcWin = new CalculatorWindow(calculator);
+			calcWin.setVisible(true);
 		});
 		driver = new JavaDriver();
 	}
